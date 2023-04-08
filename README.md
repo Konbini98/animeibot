@@ -1,27 +1,29 @@
-![NAME](./public/thumb.png)
+![Animei Bot](./assets/thumb.png)
 
-# NAME
+# Animei Bot
 ### DESCRIPTION
 
 ## Comands
 - Clone the repository.
 ``` bash
-git clone git@github.com:chrissgon/repo.git
-```
-- Install dependencies.
-``` bash
-npm i
+git clone git@github.com:chrissgon/animeibot.git
 ```
 - Run application.
 ``` bash
-npm run dev
+TOKEN_BOT=<YOUR_TOKEN> BASE_API=<API_HOST> go run main.go
+```
+- Build application.
+``` bash
+TOKEN_BOT=<YOUR_TOKEN> BASE_API=<API_HOST> go build main.go
 ```
 
 ## Anotations
-Application hosted in <a href="http://localhost:3000/">http://localhost:3000/</a>.
+<!-- Application hosted in <a href="http://localhost:3000/">http://localhost:3000/</a>. -->
 
 ## References
-- [Reference](https://google.com)
+- [Go Telegram Bot](https://github.com/go-telegram-bot-api/telegram-bot-api)
+- [Go Telegram Bot Doc](https://go-telegram-bot-api.dev/)
+- [How to use Golang to make a telegram bot](https://www.youtube.com/watch?v=orFTer_uy7w)
 
 ---
 Developed by [Christopher Gonçalves](https://github.com/chrissgon)

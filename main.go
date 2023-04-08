@@ -40,6 +40,12 @@ func main() {
 		chatID := update.Message.Chat.ID
 		userMessage := update.Message.Text
 
+		if isStartMessage(userMessage) {
+
+			send(chatID, getMessageStart())
+			continue
+		}
+
 		if isInvalidMessage(userMessage) {
 			send(chatID, "Sorry, enter a valid command 😵. Example: /manga naruto 1")
 			continue
@@ -98,6 +104,10 @@ func sendImage(chatID int64, imageBytes []byte) {
 	fileBytes := tgbotapi.FileBytes{Bytes: imageBytes}
 
 	bot.Send(tgbotapi.NewPhoto(chatID, fileBytes))
+}
+
+func isStartMessage(message string) bool {
+	return message == "/start"
 }
 
 func isInvalidMessage(message string) bool {
@@ -167,4 +177,13 @@ func getImageByURL(imageURL string) ([]byte, error) {
 	bytes, err := ioutil.ReadAll(res.Body)
 
 	return bytes, err
+}
+
+func getMessageStart() string {
+	return fmt.Sprintf(`
+Welcome to Animei Bot 😃
+
+To begin type the command /manga.
+Example: /manga naruto 1`,
+	)
 }
