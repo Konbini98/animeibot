@@ -1,4 +1,4 @@
-![Animei Bot](./assets/thumb.png)
+![Animei Bot](./thumb.jpg)
 
 # Animei Bot
 ### DESCRIPTION
