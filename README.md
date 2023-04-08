@@ -1,7 +1,7 @@
 ![Animei Bot](./thumb.jpg)
 
 # Animei Bot
-### Golang Telegram Bot to Search and Read Manga
+### Golang Telegram Bot to Search and Read Mangas
 
 ## Comands
 - Clone the repository.
